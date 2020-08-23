@@ -1,0 +1,32 @@
+.recipe-image {
+  flex: 1;
+  margin: 16px;
+}
+
+.recipe-description {
+  flex: 1;
+}
+
+.recipe-content {
+  display: flex;
+  width: 90%;
+}
+
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recipe-list a {
+  color: black;
+}
+
+.recipe-list-item {
+  flex: 1;
+  min-width: 400px;
+  max-width: 400px;
+  border: solid 1px #999;
+  margin: 16px;
+  padding: 8px;
+  border-radius: 6px;
+}

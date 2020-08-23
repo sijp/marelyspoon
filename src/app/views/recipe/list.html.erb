@@ -1,0 +1,8 @@
+<div class="recipe-list">
+<% @recipes.each do |r| %>
+  <div class="recipe-list-item">
+    <h3><%=link_to r.title, controller: "recipe", action: "details", id: r.id %></h3>
+    <img src="http:<%=r.photo.resize(400).load%>">
+  </div>
+<% end %>
+</div>

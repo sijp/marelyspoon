@@ -1,0 +1,31 @@
+
+<div class="recipe-content">
+<img class="recipe-image" src="http:<%=@photo.resize(600).load%>" />
+
+<div class="recipe-description">
+
+<h2><%=@title%></h2>
+<%unless @chef.nil?%>
+  <h3>by <%=@chef.name%></h3>
+<%end%>
+
+<%=@description%>
+
+
+
+<%unless @tags.blank? %>
+  <p>
+    tags:
+  </p>
+  <ul>
+  <%@tags.each do |tag|%>
+  <li>
+    <%=tag.name%>
+  </li>
+  <%end%>
+  </ul>
+  
+<%end%>
+</div>
+</div>
+<%=link_to "Go Back", controller: "recipe", action:"list" %>

@@ -1,6 +1,11 @@
 version: "3"
 services:
   ror:
-    build: ./src/
+    environment:
+      RAILS_MASTER_KEY: 3ce63381373024fc46c768da637f5797
+    build:
+      context: ./src/
+      args:
+        - RAILS_MASTER_KEY=3ce63381373024fc46c768da637f5797
     ports:
       - "3000:3000"

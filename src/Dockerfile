@@ -21,9 +21,14 @@ RUN yarn install --check-files
 
 COPY . ./
 
+RUN rm -f config/master.key
+ARG RAILS_MASTER_KEY
+ENV RAILS_MASTER_KEY $RAILS_MASTER_KEY
 ENV RAILS_ENV=production
+RUN echo $RAILS_MASTER_KEY
 RUN bundle exec rake assets:clean
 RUN bundle exec rake assets:precompile
+
 
 EXPOSE 3000
 

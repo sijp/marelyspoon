@@ -1,4 +1,4 @@
-# Shlomi Israel - Submition for Marely Spoon
+# Shlomi Israel - Submission for Marely Spoon
 
 This is a RoR application which uses ContentfulModel in order to model and list
 Recipes and their information.
